@@ -1,0 +1,105 @@
+@media screen and (max-width:1600px) {
+    
+}
+@media screen and (max-width:1540px) {
+    .primary_btn.header_btn {
+        border-radius: 18px;
+        padding: 16px 22px;
+    }
+    .copyright_text {
+        margin-top: 25px;
+    }
+}
+@media screen and (max-width:1440px) {
+    .border-line {
+        margin: 30px 0;
+    }
+    .footer_sec_wrap ul {
+        margin-top: 30px;
+    }
+    .section_pad {
+        padding: 70px 0;
+    }
+    .policies_inner_page .policies_content {
+        margin-top: 60px;
+    }
+    .policies_content .policy_space, .policies_content ul {
+        margin-bottom: 30px;
+    }
+}   
+@media screen and (max-width:1300px) {
+    .primary_btn.header_btn {
+        border-radius: 15px;
+        padding: 14px 20px;
+    }
+    .policies_inner_page .policies_content {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width:1200px) {
+ .hero_sec_content {
+    top: 100px;
+ }   
+ .common_sec_width {
+        width: 94%;
+    }
+}
+
+@media screen and (max-width:991.5px) {
+    .section_pad {
+        padding: 40px 0;
+    }
+    header {
+        padding: 15px 0;
+    }
+    .desktop_menu, .header_button {
+        display: none;
+    }
+    .ham_btn {
+        display: block;
+    }
+    .hero_sec_content {
+        top: 60px;
+    }
+    .policies_inner_page .policies_content {
+        margin-top: 25px;
+    }
+    /* .menu_is_visible .mobile_menu {
+        display: block;
+        right: 0;
+    } */
+}
+@media screen and (max-width: 575.5px) {
+    .footer_sec_wrap ul {
+        flex-direction: column;
+        gap: 9px;
+        margin-top: 16px;
+    }
+    .border-line {
+        margin: 25px 0;
+    }
+    /* .header_home {
+        position: sticky;
+        background: rgba(33, 33, 33, 1);
+        box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.15);
+    } */
+    .hero_sec_content {
+        top: 24%;
+    }
+    .policies_inner_page .policies_content {
+        margin: 25px 0 0;
+    }
+    .policies_inner_page.pattern_bg {
+        background-position: center;
+    }
+    .desktop-hero-bg {
+        display: none;
+    }
+    .mobile-hero-bg {
+        display: block;
+    }
+    .hero_sec_content h1 br {
+        display: none;
+    }
+}
+
