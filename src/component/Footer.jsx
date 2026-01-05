@@ -18,7 +18,7 @@ export default function Footer() {
                         <div className="copyright_text">
                             <p>
                                 Powered by RideXtra™ <br />
-                                Copyright 2025, All Rights Reserved
+                                Copyright 2026, All Rights Reserved
                             </p>
                         </div>
                     </div>
