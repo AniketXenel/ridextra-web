@@ -6,8 +6,8 @@ import Header from "@/component/Header";
 import Footer from "@/component/Footer";
 
 export const metadata = {
-  title: "Ride Extra | Comfortable & Hassle Free Ride",
-  description: "Ride Extra | Book your comfortable & hassle free ride.",
+  title: "RideXtra | Comfortable & Hassle Free Ride",
+  description: "RideXtra | Book your comfortable & hassle free ride.",
 };
 
 
