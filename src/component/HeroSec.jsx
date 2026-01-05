@@ -1,3 +1,4 @@
+import { assetPath } from "@/utils/assetPath";
 export default function HeroSec() {
     return (
         <section className="hero_sec">
@@ -9,8 +10,8 @@ export default function HeroSec() {
                 </div>
             </div>
             <div className="hero_sec_bg">
-                <img src="/images/hero-bg.webp" alt="" className="img-fluid desktop-hero-bg" />
-                <img src="/images/mobile-hero-bg.webp" alt="" className="img-fluid mobile-hero-bg" />
+                <img src={assetPath("/images/hero-bg.webp")} alt="" className="img-fluid desktop-hero-bg" />
+                <img src={assetPath("/images/mobile-hero-bg.webp")} alt="" className="img-fluid mobile-hero-bg" />
             </div>
         </section>
     );

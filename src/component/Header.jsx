@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import { assetPath } from "../utils/assetPath";
 import { useEffect,useRef, useState } from "react";
 import {usePathname} from "next/navigation";
 
@@ -52,15 +54,15 @@ export default function Header() {
                 <div className="container-fluid">
                     <div className="header_wrap">
                         {/* Logo */}
-                        <a href="/" className="header_logo">
-                            <img src="/images/icons/ridextra-logo.svg" alt="" />
-                        </a>
+                        <Link href="/" className="header_logo">
+                            <img src={assetPath("/images/icons/ridextra-logo.svg")} alt="" />
+                        </Link>
 
                         {/* Desktop Menu */}
                         <div className="desktop_menu">
                             <ul className="main_menu_list">
                                 <li className="main_menu_link current_menu_item">
-                                    <a href="/">Home</a>
+                                    <Link href="/">Home</Link>
                                 </li>
                                 <li className="main_menu_link">
                                     <a href="javascript:void(0);">About</a>
@@ -72,7 +74,7 @@ export default function Header() {
                         <div className="header_button">
                             <a href="javascript:void(0);" className="primary_btn header_btn">
                                 <span className="btn_text">Download Now</span>
-                                <img src="/images/icons/Arrow.svg" alt="Arrow" />
+                                <img src={assetPath("/images/icons/Arrow.svg")} alt="Arrow" />
                             </a>
                         </div>
 
@@ -93,9 +95,9 @@ export default function Header() {
                         >
                             <ul className="mobile_menu_list">
                             <li className="mobile_menu_link">
-                            <a href="/" onClick={closeMenu}>
+                            <Link href="/" onClick={closeMenu}>
                                 Home
-                            </a>
+                            </Link>
                             </li>
                             <li className="mobile_menu_link">
                             <a href="javascript:void.(0);" onClick={closeMenu}>

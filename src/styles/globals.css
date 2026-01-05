@@ -371,7 +371,7 @@ body.menu_is_visible .mobile_menu_overlay {
     font-size: var(--font-21px);
 }
 .policies_inner_page.pattern_bg {
-    background-image: url("/../images/elements/pattern-bg.webp");
+    background-image: url("../../public/images/elements/pattern-bg.webp");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position-x: center;
