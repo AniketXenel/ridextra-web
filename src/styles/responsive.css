@@ -102,4 +102,44 @@
         display: none;
     }
 }
+/* abt us */
+@media (max-width: 1920px) {
+  .about_us_section {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+/* core feature */
+@media (max-width: 1400px) {
+  .core_features_grid {
+    grid-template-columns: repeat(3, 340px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .core_features_grid {
+    grid-template-columns: 1fr;
+  }
+  .feature_box {
+    width: 100%;
+    max-width: 360px;
+  }
+  .core_features_heading h2 {
+    font-size: 36px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .core_features_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .core_features_grid {
+    grid-template-columns: 1fr;
+  }
+}
 
