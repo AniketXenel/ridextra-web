@@ -189,34 +189,31 @@ export default function HeroSec() {
 
 
       </section>
-      {/* <section className="Download-Redextra">
-        <div>
-            <img
-           src={assetPath("/images/left_border.png")}/>
-        </div>
-        <div className="container">
-            <div >
-            Download <span style={{font:"bold"}}>RideXtra App</span> Now 
-            </div>
-            <div>
-                Get a Ride in Minutes – Book, Track, and Pay for taxi services Anytime, Anywhere!
-            </div>
-            <div>
-                <img  
-           src={assetPath("/images/mobiles  .png")}/>
-     
-            
-            </div>
+ <section className="download-section position-relative py-5">
+  <div className="container position-relative">
+    
+    {/* Box with text */}
+    <div className="text-box p-4 " style={{ maxWidth: '600px', position: 'relative', }}>
+      <h2 className="fw-bold mb-3">
+        Download <span className="fw-bolder">RideXtra App</span> Now
+      </h2>
+      <p className="text-muted">
+        Get a Ride in Minutes – Book, Track, and Pay for taxi services Anytime, Anywhere!
+      </p>
+    </div>
 
-        </div>
-         <div>
-            <img 
-           src={assetPath("/images/right_border.png")}/>
-        </div>
+    {/* Mobile image overlapping the box */}
+    <div className="mobile-image">
+      <img 
+        src={assetPath("/images/mobiles.png")} 
+        alt="RideXtra Mobile App"
+      />
+    </div>
 
-        
+  </div>
+</section>
 
-      </section> */}
+
         </section>
    
        </section>

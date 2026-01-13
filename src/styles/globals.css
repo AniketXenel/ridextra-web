@@ -731,6 +731,37 @@
   }
 }
 
+/* Custom CSS for Download Section */
+.download-section {
+  position: relative;
+  background-color: #f8f9fa;
+  padding-top: 80px; /* leave space for overlap */
+  padding-bottom: 80px;
+}
+
+.download-section .text-box {
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  border-radius: 15px;
+
+}
+
+.download-section .mobile-image {
+  position: absolute;
+  top: -120px;  /* negative top to make it overlap previous section */
+  right: 30px;  /* adjust horizontal position */
+  z-index: 2;
+}
+
+.download-section .mobile-image img {
+  width: 400px;      /* smaller image size */
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px; /* optional */
+}
+
+
 
 
 
