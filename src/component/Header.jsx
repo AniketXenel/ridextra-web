@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { assetPath } from "../utils/assetPath";
+// import { assetPath } from "../utils/assetPath";
 import { useEffect,useRef, useState } from "react";
 import {usePathname} from "next/navigation";
 
@@ -55,7 +55,7 @@ export default function Header() {
                     <div className="header_wrap">
                         {/* Logo */}
                         <Link href="/" className="header_logo">
-                            <img src={assetPath("/images/icons/ridextra-logo.svg")} alt="" />
+                            <img src="/images/icons/ridextra-logo.svg" alt="" />
                         </Link>
 
                         {/* Desktop Menu */}
@@ -74,7 +74,7 @@ export default function Header() {
                         <div className="header_button">
                             <a href="javascript:void(0);" className="primary_btn header_btn">
                                 <span className="btn_text">Download Now</span>
-                                <img src={assetPath("/images/icons/Arrow.svg")} alt="Arrow" />
+                                <img src="/images/icons/Arrow.svg" alt="Arrow" />
                             </a>
                         </div>
 

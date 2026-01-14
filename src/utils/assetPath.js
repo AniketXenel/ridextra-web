@@ -1,3 +1,3 @@
-export const assetPath = (path) => {
-  return `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${path}`;
-};
+// export const assetPath = (path) => {
+//   return `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${path}`;
+// };

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { assetPath } from "@/utils/assetPath";
+// import { assetPath } from "@/utils/assetPath";
 
 export default function Footer() {
     return (
@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className="container-fluid">
                     <div className="footer_sec_wrap">
                         <div className="footer_logo">
-                            <img src={assetPath("images/icons/ridextra-logo.svg")} alt="" />
+                            <img src="images/icons/ridextra-logo.svg" alt="" />
                         </div>
                         <ul>
                             <li><Link href="/">Home</Link></li>

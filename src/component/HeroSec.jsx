@@ -1,4 +1,4 @@
-import { assetPath } from "@/utils/assetPath";
+// import { assetPath } from "@/utils/assetPath";
 
 export default function HeroSec() {
     
@@ -14,8 +14,8 @@ export default function HeroSec() {
                 </div>
             </div>
             <div className="hero_sec_bg">
-                <img src={assetPath("/images/hero-bg.webp")} alt="" className="img-fluid desktop-hero-bg" />
-                <img src={assetPath("/images/mobile-hero-bg.webp")} alt="" className="img-fluid mobile-hero-bg" />
+                <img src="/images/hero-bg.webp" alt="" className="img-fluid desktop-hero-bg" />
+                <img src="/images/mobile-hero-bg.webp" alt="" className="img-fluid mobile-hero-bg" />
             </div>
             </section>
              </section>
@@ -53,7 +53,7 @@ export default function HeroSec() {
 <div
   className="core_features_bg_wrap"
   style={{
-    backgroundImage: `url(${assetPath("/images/feature_background.png")})`
+    backgroundImage: `url(${("/images/feature_background.png")})`
   }}
 >
           {/* Feature Cards */}
@@ -101,7 +101,7 @@ export default function HeroSec() {
   ].map((item, index) => (
     <div className="feature_box" key={index}>
       <img
-        src={assetPath(item.icon)}
+        src={(item.icon)}
         alt="feature icon"
         className="feature_icon"
       />
@@ -120,7 +120,7 @@ export default function HeroSec() {
 
     {/* Heading */}
     <h2 className="how-title text-center">
-      How it Works
+      How it <span style={{fontWeight:"bold"}}>Works</span>
     </h2>
 
     {/* Cards */}
@@ -133,15 +133,15 @@ export default function HeroSec() {
             
             <div className="col-md-5 text-center">
               <img
-                src={assetPath("/images/left_mobile.png")}
+                src="/images/left_mobile.png"
                 alt="Riders App"
                 className="how-mobile-img"
               />
             </div>
 
             <div className="col-md-7">
-              <h3 className="how-card-title"style={{marginLeft:"24px"}}>For Riders</h3>
-              <ul className="how-list"style={{marginLeft:"1px"}}>
+              <h3 className="how-card-title"style={{marginLeft:"35px"}}>For Riders</h3>
+              <ul className="how-list"style={{marginLeft:"19px"}}>
                 <li>1. Enter pickup and destination</li>
                 <li>2. View fare estimates and ride options</li>
                 <li>3. Get matched with nearby drivers</li>
@@ -160,7 +160,7 @@ export default function HeroSec() {
           <div className="row align-items-center">
                <div className="col-md-5 text-center">
               <img
-                src={assetPath("/images/right_mobile.png")}
+                src="/images/right_mobile.png"
                   alt="Drivers App"
                 className="how-mobile-img"
               />
@@ -168,7 +168,7 @@ export default function HeroSec() {
             
             <div className="col-md-7">
               <h3 className="how-card-title"style={{marginLeft:"30px",}}>For Drivers</h3>
-              <ul className="how-list"style={{marginLeft:"6px"}}>
+              <ul className="how-list"style={{marginLeft:"15px"}}>
                 <li>1. Register and complete verification</li>
                 <li>2. Accept ride requests based on availability</li>
                 <li>3. Navigate efficiently with in-app maps</li>
@@ -205,7 +205,7 @@ export default function HeroSec() {
     {/* Mobile image overlapping the box */}
     <div className="mobile-image">
       <img 
-        src={assetPath("/images/mobiles.png")} 
+        src="/images/mobiles.png"
         alt="RideXtra Mobile App"
       />
     </div>
