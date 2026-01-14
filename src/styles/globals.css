@@ -105,7 +105,9 @@
       padding: 18px 26px;
       color: var(--primary-light);
   }
-
+.desktop-hero-bg{
+  width: 100%;
+}
 
   /* header start */
   header {
@@ -424,7 +426,7 @@
   /* footer end */
 
   .about_us_section {
-    width: 1920px;
+    width: 100%;
     height: 900px;
     background-color: #000;
     opacity: 1;
@@ -545,7 +547,7 @@
     FEATURE BOX (SMALL + HOVER)
   ========================= */
   .feature_box {
-    width: 350px;  /* smaller width */
+    width: 100%;  /* smaller width */
     height: 230px; /* smaller height */
     background: #FFFBFB;
     border-radius: 24px;
@@ -612,14 +614,14 @@
 
   .core_features_bg_wrap {
     width: 100%;
-    max-width: 1920px;   /* keeps Figma width */
-    margin: 0 auto;      /* centers on large screens */
+    max-width: 1920px;  
+    margin: 0 auto;      
 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    padding: 80px 20px;  /* space for cards */
+    padding: 80px 20px;  
   }
 
   /* GRID RESPONSIVE */
@@ -656,7 +658,7 @@
   max-width: 720px;       /* reduced from 807 */
   background: #ffffff;
   border-radius: 32px;    /* softer & smaller */
-  padding: 32px;
+  padding: 12px;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
@@ -680,7 +682,7 @@
 /* CARD TITLE */
 .how-card-title {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 420;
   margin-bottom: 16px;
   color: #222;
 }
@@ -693,7 +695,7 @@
 .how-list li {
   font-size: 15px;
   margin-bottom: 8px;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* RESPONSIVE – TABLET */
@@ -728,37 +730,222 @@
 
   .how-mobile-img {
     height: 220px;
+    
+
   }
 }
+
+
 
 /* Custom CSS for Download Section */
 .download-section {
   position: relative;
   background-color: #f8f9fa;
-  padding-top: 80px; /* leave space for overlap */
-  padding-bottom: 80px;
+  padding-top: 120px;
+  padding-bottom: 160px;
+  min-height: 550px;
 }
 
-.download-section .text-box {
+.video-row {
   position: relative;
   z-index: 1;
-  padding: 30px;
-  border-radius: 15px;
-
 }
 
+.video-card {
+  width: 160px;
+  height: 100px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  /* box-shadow: 0 8px 25px rgba(0,0,0,0.15); */
+  transition: transform 0.3s ease;
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+/* Subtle zoom on hover */
+.video-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Floating mobile image */
 .download-section .mobile-image {
   position: absolute;
-  top: -120px;  /* negative top to make it overlap previous section */
-  right: 30px;  /* adjust horizontal position */
+  top: -120px;
+  right: 50px;
   z-index: 2;
+
 }
 
 .download-section .mobile-image img {
-  width: 400px;      /* smaller image size */
-  height: auto;
-  object-fit: contain;
-  border-radius: 20px; /* optional */
+  width: 600px;
+  border-radius: 20px;
+  min-height: 710px;
+}
+.video-card-wrapper {
+  position: relative;
+  width: 220px;
+}
+
+/* Button styles */
+.driver-btn {
+  width: 180px;
+  height: 50px;
+  margin-top: 16px;
+  margin-left:px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10.69px;
+
+  padding: 15px 12px;
+  border-radius: 16.03px;
+
+  background-color: #ffffff;
+  color: #5E45AD;
+
+  font-weight: 600;
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover & Active */
+.driver-btn:hover,
+.driver-btn:active {
+  background-color: #5E45AD;
+  color: #ffffff;
+}
+
+/* Base role button */
+.role-btn {
+  width: 180px;
+  height: 50px;
+  margin-top: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10.69px;
+
+  padding: 16.03px 32.06px;
+  border-radius: 16.03px;
+
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Driver (Purple) */
+.role-btn--driver {
+  color: #5E45AD;
+  border: 1.5px solid #5E45AD;
+}
+
+.role-btn--driver:hover,
+.role-btn--driver:active {
+  background-color: #5E45AD;
+  color: #ffffff;
+}
+
+/* User (Yellow) */
+.role-btn--user {
+  color: #FCC02E;
+
+}
+
+.role-btn--user:hover,
+.role-btn--user:active {
+  background-color: #FCC02E;
+  color: #ffffff;
+}
+.download-border {
+  position: absolute;
+  top: 50%;
+  width: 118px;
+  height: 550px;
+  z-index: 0; /* behind content */
+  border-radius: 8px;
+  background: linear-gradient(268.46deg, #FCC02E -164.36%, #FFFFFF 98.69%);
+}
+.download-border--left {
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* RIGHT */
+.download-border--right {
+  right: 0;
+  transform: translateY(-50%);
+}
+
+@media (max-width:1400px)
+{
+  .download-section .mobile-image img {
+  width: 300px;
+  border-radius: 20px;
+  min-height: 300px;
+}
+}
+@media (max-width: 992px) {
+
+  /* Make section normal flow */
+  .download-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  /* Reset absolute positioning */
+  .download-section .mobile-image {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Resize image */
+  .download-section .mobile-image img {
+    width: 300px;
+    min-height: auto;
+  }
+
+  /* Ensure content appears below image */
+  .download-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-box,
+  .video-row {
+    width: 100%;
+    text-align: center;
+  }
+
+  .video-row {
+    justify-content: center;
+
+  }
+  .download-border {
+  /* position: absolute; */
+  top: 50%;
+  width: 50px;
+  height: 550px;
+  z-index: 0; /* behind content */
+  border-radius: 8px;
+  background: linear-gradient(268.46deg, #FCC02E -164.36%, #FFFFFF 98.69%);
+}
 }
 
 
@@ -767,6 +954,676 @@
 
 
 
+/* ================================
+
+   CAR LOCATION MARKER ANIMATION
+
+   Position: Left → Middle → Right → Center (bigger)
+
+   NO BLINKING - Just position changes
+
+================================ */
+ 
+.car_location_marker {
+
+  position: absolute;
+
+  z-index: 100;
+
+  pointer-events: none;
+
+  width: 120px;
+
+  height: auto;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  animation: carTeleport 10s ease-in-out infinite;
+
+}
+ 
+.car_location_marker img {
+
+  width: 100%;
+
+  height: auto;
+
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.3));
+
+}
+ 
+/* Main animation: Just position changes (no blink) */
+
+@keyframes carTeleport {
+
+  /* Position 1: LEFT */
+
+  0% {
+
+    left: 15%;
+
+    transform: translateY(-50%) scale(0.65);
+
+    opacity: 0;
+
+  }
+ 
+  3% {
+
+    opacity: 1;
+
+  }
+ 
+  20% {
+
+    left: 15%;
+
+    transform: translateY(-50%) scale(0.65);
+
+    opacity: 1;
+
+  }
+ 
+  23% {
+
+    opacity: 0;
+
+  }
+ 
+  /* Position 2: MIDDLE */
+
+  25% {
+
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0.75);
+
+    opacity: 0;
+
+  }
+ 
+  28% {
+
+    opacity: 1;
+
+  }
+ 
+  45% {
+
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0.75);
+
+    opacity: 1;
+
+  }
+ 
+  48% {
+
+    opacity: 0;
+
+  }
+ 
+  /* Position 3: RIGHT */
+
+  50% {
+
+    left: 85%;
+
+    transform: translateY(-50%) scale(0.7);
+
+    opacity: 0;
+
+  }
+ 
+  53% {
+
+    opacity: 1;
+
+  }
+ 
+  70% {
+
+    left: 85%;
+
+    transform: translateY(-50%) scale(0.7);
+
+    opacity: 1;
+
+  }
+ 
+  73% {
+
+    opacity: 0;
+
+  }
+ 
+  /* Position 4: CENTER - Bigger */
+
+  75% {
+
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0.9);
+
+    opacity: 0;
+
+  }
+ 
+  78% {
+
+    opacity: 1;
+
+    transform: translate(-50%, -50%) scale(1);
+
+  }
+ 
+  85% {
+
+    transform: translate(-50%, -50%) scale(1.2);
+
+  }
+ 
+  90%, 100% {
+
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(1.3);
+
+    opacity: 1;
+
+  }
+
+}
+ 
+/* ================================
+
+   MOBILE RESPONSIVE (Tablets)
+
+================================ */
+ 
+@media (max-width: 992px) {
+
+  .car_location_marker {
+
+    width: 90px;
+
+  }
+ 
+  @keyframes carTeleport {
+
+    0% {
+
+      left: 12%;
+
+      transform: translateY(-50%) scale(0.6);
+
+      opacity: 0;
+
+    }
+ 
+    3% {
+
+      opacity: 1;
+
+    }
+ 
+    20% {
+
+      left: 12%;
+
+      transform: translateY(-50%) scale(0.6);
+
+      opacity: 1;
+
+    }
+ 
+    23% {
+
+      opacity: 0;
+
+    }
+ 
+    25% {
+
+      left: 50%;
+
+      transform: translate(-50%, -50%) scale(0.7);
+
+      opacity: 0;
+
+    }
+ 
+    28% {
+
+      opacity: 1;
+
+    }
+ 
+    45% {
+
+      left: 50%;
+
+      transform: translate(-50%, -50%) scale(0.7);
+
+      opacity: 1;
+
+    }
+ 
+    48% {
+
+      opacity: 0;
+
+    }
+ 
+    50% {
+
+      left: 88%;
+
+      transform: translateY(-50%) scale(0.65);
+
+      opacity: 0;
+
+    }
+ 
+    53% {
+
+      opacity: 1;
+
+    }
+ 
+    70% {
+
+      left: 88%;
+
+      transform: translateY(-50%) scale(0.65);
+
+      opacity: 1;
+
+    }
+ 
+    73% {
+
+      opacity: 0;
+
+    }
+ 
+    75% {
+
+      left: 50%;
+
+      transform: translate(-50%, -50%) scale(0.8);
+
+      opacity: 0;
+
+    }
+ 
+    78% {
+
+      opacity: 1;
+
+    }
+ 
+    85% {
+
+      transform: translate(-50%, -50%) scale(1.05);
+
+    }
+ 
+    90%, 100% {
+
+      left: 50%;
+
+      transform: translate(-50%, -50%) scale(1.15);
+
+      opacity: 1;
+
+    }
+
+  }
+
+}
+ 
+/* ================================
+
+   MOBILE RESPONSIVE (Phones)
+
+================================ */
+ 
+@media (max-width: 576px) {
+
+  .car_location_marker {
+
+    width: 75px;
+
+  }
+ 
+  @keyframes carTeleport {
+
+    0% {
+
+      left: 10%;
+
+      transform: translateY(-50%) scale(0.55);
+
+      opacity: 0;
+
+    }
+ 
+    3% {
+
+      opacity: 1;
+
+    }
+ 
+    20% {
+
+      left: 10%;
+
+      transform: translateY(-50%) scale(0.55);
+
+      opacity: 1;
+
+    }
+ 
+    23% {
+
+      opacity: 0;
+
+    }
+ 
+    25% {
+
+      left: 50%;
+
+      transform: translate(-50%, -50%) scale(0.65);
+
+      opacity: 0;
+
+    }
+ 
+    28% {
+
+      opacity: 1;
+
+    }
+ 
+    45% {
+
+      left: 50%;
+
+      transform: translate(-50%, -50%) scale(0.65);
+
+      opacity: 1;
+
+    }
+ 
+    48% {
+
+      opacity: 0;
+
+    }
+ 
+    50% {
+
+      left: 90%;
+
+      transform: translateY(-50%) scale(0.6);
+
+      opacity: 0;
+
+    }
+ 
+    53% {
+
+      opacity: 1;
+
+    }
+ 
+    70% {
+
+      left: 90%;
+
+      transform: translateY(-50%) scale(0.6);
+
+      opacity: 1;
+
+    }
+ 
+    73% {
+
+      opacity: 0;
+
+    }
+ 
+    75% {
+
+      left: 50%;
+
+      transform: translate(-50%, -50%) scale(0.75);
+
+      opacity: 0;
+
+    }
+ 
+    78% {
+
+      opacity: 1;
+
+    }
+ 
+    85% {
+
+      transform: translate(-50%, -50%) scale(0.95);
+
+    }
+ 
+    90%, 100% {
+
+      left: 50%;
+
+      transform: translate(-50%, -50%) scale(1.05);
+
+      opacity: 1;
+
+    }
+
+  }
+
+}
+
+ /* ================================
+
+   ABOUT US SECTION WITH TAXI VIDEO
+
+================================ */
+ 
+.about_us_section {
+
+  width: 100%;
+
+  min-height: 800px;
+
+  background-color: #000;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  padding: 80px 5% 0;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+ 
+.about_us_content {
+
+  max-width: 900px;
+
+  text-align: center;
+
+  color: #fff;
+
+  z-index: 2;
+
+}
+ 
+.about_us_content h2 {
+
+  font-size: 56px;
+
+  font-weight: 700;
+
+  margin-bottom: 30px;
+
+  margin-top: 0;
+
+}
+ 
+.about_us_content p {
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #dcdcdc;
+
+  margin-bottom: 20px;
+
+}
+ 
+.download_btn {
+
+  margin-top: 40px;
+
+  padding: 14px 36px;
+
+  background-color: #5E45AD;
+
+  color: #fff;
+
+  font-size: 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+}
+ 
+.download_btn:hover {
+
+  background-color: #4b3790;
+
+  transform: translateY(-2px);
+
+}
+ 
+/* ================================
+
+   MOVING TAXI VIDEO - FULL WIDTH
+
+================================ */
+ 
+.moving_taxi_container {
+
+  width: 100%;
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  right: 0;
+
+  z-index: 1;
+  max-height:600px;
+
+}
+ 
+.taxi_video {
+
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+
+}
+ 
+/* ================================
+
+   MOBILE RESPONSIVE
+
+================================ */
+ 
+@media (max-width: 992px) {
+
+  .about_us_section {
+
+    max-height: 500px;
+
+    padding: 60px 5% 0;
+
+  }
+ 
+  .about_us_content h2 {
+
+    font-size: 42px;
+
+  }
+
+}
+ 
+@media (max-width: 576px) {
+
+  .about_us_section {
+
+    min-height: 600px;
+
+    padding: 40px 5% 0;
+
+  }
+ 
+  .about_us_content h2 {
+
+    font-size: 32px;
+
+  }
+ 
+  .about_us_content p {
+
+    font-size: 16px;
+
+  }
+ 
+  .download_btn {
+
+    padding: 12px 28px;
+
+    font-size: 16px;
+
+  }
+
+}
+
+ 
 
 
 
