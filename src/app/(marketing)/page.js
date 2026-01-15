@@ -1,13 +1,17 @@
 
 
-import HeroSec from "@/component/HeroSec";
-import SecondSection from "@/component/SecondSection";
+// import HeroSec from "@/component/HeroSec";
+import MainPage from "@/component/MainPage";
+// import AboutUs from "@/component/AboutUs";
+// import HomeWrapper from "@/component/HomeWrapper";
 
 export default function Marketing() {
     return (
       <main>
-        <HeroSec />
-        <SecondSection/>
+        {/* <HeroSec /> */}
+        {/* <AboutUs/> */}
+        {/* <HomeWrapper/> */}
+        <MainPage/>
     
       </main>
     );

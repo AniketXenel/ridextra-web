@@ -425,54 +425,6 @@
   }
   /* footer end */
 
-  .about_us_section {
-    width: 100%;
-    height: 900px;
-    background-color: #000;
-    opacity: 1;
-    display: flex;
-    
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  .about_us_content {
-    max-width: 900px;
-    text-align: center;
-    color: #fff;
-  }
-
-  .about_us_content h2 {
-    font-size: 56px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    margin-top:120px;
-  }
-
-  .about_us_content p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #dcdcdc;
-    margin-bottom: 20px;
-  }
-
-  .download_btn {
-    margin-top: 40px;
-    padding: 14px 36px;
-    background-color: #5E45AD;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .download_btn:hover {
-    background-color: #4b3790;
-    transform: translateY(-2px);
-  }
-
 
   /* ================================
     CORE FEATURES SECTION
@@ -638,6 +590,8 @@
 /* how it work section //////////////////////////////////////////////////////*/
 /* SECTION BACKGROUND */
 /* SECTION BACKGROUND */
+/* how it work section //////////////////////////////////////////////////////*/
+/* SECTION BACKGROUND */
 .how-it-works {
   background: url('../../public/images/bg_3.png') no-repeat center center;
   background-size: cover;
@@ -662,6 +616,7 @@
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 
 /* IMAGE COLUMN */
@@ -677,6 +632,7 @@
   width: auto;
   max-width: none;
   display: block;
+  margin: 0 auto;
 }
 
 /* CARD TITLE */
@@ -685,6 +641,7 @@
   font-weight: 420;
   margin-bottom: 16px;
   color: #222;
+  text-align: center;
 }
 
 /* LIST */
@@ -698,7 +655,7 @@
   line-height: 1.8;
 }
 
-/* RESPONSIVE – TABLET */
+/* RESPONSIVE – TABLET (768px - 991px) */
 @media (max-width: 991px) {
   .how-card {
     max-width: 100%;
@@ -709,32 +666,98 @@
 
   .how-mobile-img {
     height: 260px;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
+    display: block;
   }
 
   .how-list {
     text-align: left;
     display: inline-block;
+    padding-left: 20px;
+  }
+  
+  /* Remove inline styles by overriding with important */
+  .how-card-title[style*="margin-left"] {
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+  
+  .how-list[style*="margin-left"] {
+    margin-left: 0 !important;
   }
 }
 
-/* RESPONSIVE – MOBILE */
-@media (max-width: 576px) {
+/* RESPONSIVE – MOBILE (less than 768px) */
+@media (max-width: 767px) {
+  .how-it-works {
+    padding: 60px 0;
+  }
+  
   .how-title {
     font-size: 30px;
+    margin-bottom: 40px;
   }
 
   .how-card {
     padding: 22px;
+    display: block; /* Change from flex to block for stacking */
   }
-
+  
   .how-mobile-img {
     height: 220px;
-    
-
+    margin: 0 auto 20px;
+  }
+  
+  /* Force image to center in mobile */
+  .how-card .col-md-5 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Remove inline styles */
+  .how-card-title[style*="margin-left"],
+  .how-card-title[style*="marginLeft"] {
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+  
+  .how-list[style*="margin-left"],
+  .how-list[style*="marginLeft"] {
+    margin-left: 0 !important;
+    text-align: center !important;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  
+  .how-list li {
+    text-align: left;
+    margin-bottom: 10px;
   }
 }
 
+/* Extra small screens (less than 576px) */
+@media (max-width: 575px) {
+  .how-title {
+    font-size: 26px;
+  }
+  
+  .how-card {
+    padding: 18px;
+  }
+  
+  .how-mobile-img {
+    height: 200px;
+  }
+  
+  .how-card-title {
+    font-size: 22px;
+  }
+  
+  .how-list li {
+    font-size: 14px;
+  }
+}
 
 
 /* Custom CSS for Download Section */
@@ -868,59 +891,105 @@
   background-color: #FCC02E;
   color: #ffffff;
 }
+/* download sectionnnnnnnnnnn//////////// */
+/* download section ////////////////////////// */
+
+/* Gradient Borders */
 .download-border {
   position: absolute;
   top: 50%;
-  width: 118px;
-  height: 550px;
+  width: 76px;
+  height: 100%;
   z-index: 0; /* behind content */
   border-radius: 8px;
   background: linear-gradient(268.46deg, #FCC02E -164.36%, #FFFFFF 98.69%);
 }
+
+/* LEFT gradient */
 .download-border--left {
+  position: absolute;
+  top: 0;
   left: 0;
-  transform: translateY(-50%) rotate(180deg);
+  width: 80px; /* adjust thickness */
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(
+    to right,           /* horizontal gradient */
+    #fcdb89 0%,         /* yellow start */
+    rgba(255, 255, 255, 0.0) 100% /* fade to transparent */
+  );
 }
 
-/* RIGHT */
+/* RIGHT gradient */
 .download-border--right {
+  position: absolute;
+  top: 0;
   right: 0;
-  transform: translateY(-50%);
+  width: 80px;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(
+    to left,            /* horizontal gradient mirrored */
+    #fcdb89 0%,         /* yellow start */
+    rgba(255, 255, 255, 0.0) 100% /* fade to transparent */
+  );
 }
 
-@media (max-width:1400px)
-{
-  .download-section .mobile-image img {
-  width: 300px;
+/* Mobile Image - Large Screens */
+.download-section {
+  position: relative; /* container for absolute image */
+}
+
+.download-section .mobile-image {
+  position: absolute; /* absolute for overlap */
+  top: -120px;        /* adjust vertical position */
+  right: -100px;       /* move more to the right */
+  z-index: 2;
+}
+
+.download-section .mobile-image img {
+  width: 600px;
   border-radius: 20px;
-  min-height: 300px;
+  min-height: 710px;
 }
-}
-@media (max-width: 992px) {
 
-  /* Make section normal flow */
+/* Medium Screens */
+@media (max-width: 1400px) {
+  .download-section .mobile-image img {
+    width: 500px;
+    max-height: 600px;
+    border-radius: 20px;
+  }
+
+  .download-section .mobile-image {
+    right: -50px; /* slightly less right on smaller screens */
+  }
+}
+
+/* Small Screens */
+@media (max-width: 992px) {
+  /* Section padding */
   .download-section {
     padding-top: 60px;
     padding-bottom: 80px;
   }
 
-  /* Reset absolute positioning */
+  /* Reset image to normal flow & center */
   .download-section .mobile-image {
-    position: relative;
+    position: relative; 
     top: 0;
     right: 0;
-    margin: 0 auto 30px;
-    display: flex;
-    justify-content: center;
+    margin: 0 auto 30px; /* center image */
+    display: block;
   }
 
-  /* Resize image */
+  /* Resize image for mobile */
   .download-section .mobile-image img {
     width: 300px;
     min-height: auto;
   }
 
-  /* Ensure content appears below image */
+  /* Center content below image */
   .download-section .container {
     display: flex;
     flex-direction: column;
@@ -935,17 +1004,17 @@
 
   .video-row {
     justify-content: center;
-
   }
+
+  /* Adjust gradient border height for small screens */
   .download-border {
-  /* position: absolute; */
-  top: 50%;
-  width: 50px;
-  height: 550px;
-  z-index: 0; /* behind content */
-  border-radius: 8px;
-  background: linear-gradient(268.46deg, #FCC02E -164.36%, #FFFFFF 98.69%);
-}
+    top: 50%;
+    width: 50px;
+    height: 100%;
+    z-index: 0;
+    border-radius: 8px;
+    background: linear-gradient(268.46deg, #FCC02E -164.36%, #FFFFFF 98.69%);
+  }
 }
 
 
@@ -1439,14 +1508,62 @@
    ABOUT US SECTION WITH TAXI VIDEO
 
 ================================ */
+
+/* About us sectionnn//////////////////////// */
+  .about_us_section {
+    width: 100%;
+    height: 900px;
+    background-color: #000;
+    opacity: 1;
+    display: flex;
+    
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .about_us_content {
+    max-width: 900px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .about_us_content h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top:120px;
+  }
+
+  .about_us_content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+  }
+
+  .download_btn {
+    margin-top: 40px;
+    padding: 14px 36px;
+    background-color: #5E45AD;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .download_btn:hover {
+    background-color: #4b3790;
+    transform: translateY(-2px);
+  }
+
  
 .about_us_section {
 
   width: 100%;
 
   min-height: 800px;
-
-  background-color: #000;
 
   display: flex;
 
@@ -1552,6 +1669,7 @@
 
   z-index: 1;
   max-height:600px;
+  margin-bottom: 20px;
 
 }
  
@@ -1572,12 +1690,18 @@
    MOBILE RESPONSIVE
 
 ================================ */
+@media (max-width: 1400px) {
+  .moving_taxi_container {
+     /* less overlap */
+min-height: 300px;
+  }
+}
  
 @media (max-width: 992px) {
 
   .about_us_section {
 
-    max-height: 500px;
+    max-height: 100%;
 
     padding: 60px 5% 0;
 
@@ -1595,7 +1719,7 @@
 
   .about_us_section {
 
-    min-height: 600px;
+    min-height: 100%;
 
     padding: 40px 5% 0;
 
@@ -1622,9 +1746,8 @@
   }
 
 }
-
+/* ////////////////////////////////////// */
  
-
 
 
 
