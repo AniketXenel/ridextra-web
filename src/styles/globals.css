@@ -527,14 +527,11 @@
     width: 48px;
     height: 48px;
     margin-bottom: 15px;
-    transition: all 0.3s ease;
+    transition: filter  0.3s ease;
+    
   }
 
-  /* Icon on hover → purple */
-  .feature_box:hover .feature_icon {
-    filter: hue-rotate(260deg) saturate(4); /* approximate purple */
-    /* OR you can use a purple version of the image */
-  }
+  /* Simple purple on hover */
 
   /* Title */
   .feature_box h3 {
@@ -573,7 +570,7 @@
     background-size: cover;
     background-position: center;
 
-    padding: 80px 20px;  
+    padding: 45px 20px;  
   }
 
   /* GRID RESPONSIVE */
@@ -840,7 +837,6 @@
 }
 
 /* Hover & Active */
-.driver-btn:hover,
 .driver-btn:active {
   background-color: #5E45AD;
   color: #ffffff;
@@ -874,7 +870,6 @@
   border: 1.5px solid #5E45AD;
 }
 
-.role-btn--driver:hover,
 .role-btn--driver:active {
   background-color: #5E45AD;
   color: #ffffff;
@@ -885,12 +880,17 @@
   color: #FCC02E;
 
 }
+/* ACTIVE STATES */
+.driver-btn.active {
+  background-color: #5E45AD;
+  color: #ffffff;
+}
 
-.role-btn--user:hover,
-.role-btn--user:active {
+.role-btn--user.active {
   background-color: #FCC02E;
   color: #ffffff;
 }
+
 /* download sectionnnnnnnnnnn//////////// */
 /* download section ////////////////////////// */
 
@@ -1008,7 +1008,7 @@
 
   /* Adjust gradient border height for small screens */
   .download-border {
-    top: 50%;
+   
     width: 50px;
     height: 100%;
     z-index: 0;
@@ -1032,180 +1032,126 @@
    NO BLINKING - Just position changes
 
 ================================ */
- 
 .car_location_marker {
-
   position: absolute;
-
   z-index: 100;
-
   pointer-events: none;
-
-  width: 120px;
-
+  width: 200px;
   height: auto;
-
   top: 50%;
-
   transform: translateY(-50%);
-
   animation: carTeleport 10s ease-in-out infinite;
-
 }
- 
+
 .car_location_marker img {
-
   width: 100%;
-
   height: auto;
-
   filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.3));
-
 }
- 
-/* Main animation: Just position changes (no blink) */
 
+/* Main animation: Teleport between positions (no sliding) */
 @keyframes carTeleport {
-
   /* Position 1: LEFT */
-
   0% {
-
     left: 15%;
-
     transform: translateY(-50%) scale(0.65);
-
     opacity: 0;
-
   }
- 
-  3% {
-
+  
+  /* INSTANT APPEAR at left */
+  1%, 19% {
+    left: 15%;
+    transform: translateY(-50%) scale(0.65);
     opacity: 1;
-
   }
- 
+  
+  /* INSTANT DISAPPEAR from left */
   20% {
-
     left: 15%;
-
     transform: translateY(-50%) scale(0.65);
-
-    opacity: 1;
-
-  }
- 
-  23% {
-
     opacity: 0;
-
   }
- 
-  /* Position 2: MIDDLE */
-
-  25% {
-
+  
+  /* Position 2: MIDDLE - INSTANT TELEPORT */
+  21% {
     left: 50%;
-
     transform: translate(-50%, -50%) scale(0.75);
-
     opacity: 0;
-
   }
- 
-  28% {
-
+  
+  /* INSTANT APPEAR at middle */
+  22%, 44% {
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.75);
     opacity: 1;
-
   }
- 
+  
+  /* INSTANT DISAPPEAR from middle */
   45% {
-
     left: 50%;
-
     transform: translate(-50%, -50%) scale(0.75);
-
-    opacity: 1;
-
-  }
- 
-  48% {
-
     opacity: 0;
-
   }
- 
-  /* Position 3: RIGHT */
-
-  50% {
-
+  
+  /* Position 3: RIGHT - INSTANT TELEPORT */
+  46% {
     left: 85%;
-
     transform: translateY(-50%) scale(0.7);
-
     opacity: 0;
-
   }
- 
-  53% {
-
+  
+  /* INSTANT APPEAR at right */
+  47%, 69% {
+    left: 85%;
+    transform: translateY(-50%) scale(0.7);
     opacity: 1;
-
   }
- 
+  
+  /* INSTANT DISAPPEAR from right */
   70% {
-
     left: 85%;
-
     transform: translateY(-50%) scale(0.7);
-
-    opacity: 1;
-
-  }
- 
-  73% {
-
     opacity: 0;
-
   }
- 
-  /* Position 4: CENTER - Bigger */
-
+  
+  /* Position 4: CENTER BOTTOM - INSTANT TELEPORT & GROW */
+  71% {
+    left: 50%;
+    transform: translate(-50%, -30%) scale(0.9); /* Start slightly lower */
+    opacity: 0;
+  }
+  
+  /* INSTANT APPEAR at center bottom */
+  72% {
+    opacity: 1;
+    transform: translate(-50%, -30%) scale(1); /* Slightly lower */
+  }
+  
   75% {
-
-    left: 50%;
-
-    transform: translate(-50%, -50%) scale(0.9);
-
-    opacity: 0;
-
+    transform: translate(-50%, -20%) scale(1.1); /* Move down a bit */
   }
- 
-  78% {
-
-    opacity: 1;
-
-    transform: translate(-50%, -50%) scale(1);
-
+  
+  80% {
+    transform: translate(-50%, -10%) scale(1.2); /* Move further down */
   }
- 
+  
   85% {
-
-    transform: translate(-50%, -50%) scale(1.2);
-
+    transform: translate(-50%, 0%) scale(1.3); /* At center vertical */
   }
- 
+  
   90%, 100% {
-
     left: 50%;
-
-    transform: translate(-50%, -50%) scale(1.3);
-
+    transform: translate(-50%, 10%) scale(1.2); /* Final: Slightly below center */
     opacity: 1;
-
   }
-
 }
+/* Hide car pointer on screens smaller than 576px */
+@media (max-width: 576px) {
+  .car_location_marker {
+    display: none;
+  }
+}
+
  
 /* ================================
 
@@ -1213,147 +1159,7 @@
 
 ================================ */
  
-@media (max-width: 992px) {
 
-  .car_location_marker {
-
-    width: 90px;
-
-  }
- 
-  @keyframes carTeleport {
-
-    0% {
-
-      left: 12%;
-
-      transform: translateY(-50%) scale(0.6);
-
-      opacity: 0;
-
-    }
- 
-    3% {
-
-      opacity: 1;
-
-    }
- 
-    20% {
-
-      left: 12%;
-
-      transform: translateY(-50%) scale(0.6);
-
-      opacity: 1;
-
-    }
- 
-    23% {
-
-      opacity: 0;
-
-    }
- 
-    25% {
-
-      left: 50%;
-
-      transform: translate(-50%, -50%) scale(0.7);
-
-      opacity: 0;
-
-    }
- 
-    28% {
-
-      opacity: 1;
-
-    }
- 
-    45% {
-
-      left: 50%;
-
-      transform: translate(-50%, -50%) scale(0.7);
-
-      opacity: 1;
-
-    }
- 
-    48% {
-
-      opacity: 0;
-
-    }
- 
-    50% {
-
-      left: 88%;
-
-      transform: translateY(-50%) scale(0.65);
-
-      opacity: 0;
-
-    }
- 
-    53% {
-
-      opacity: 1;
-
-    }
- 
-    70% {
-
-      left: 88%;
-
-      transform: translateY(-50%) scale(0.65);
-
-      opacity: 1;
-
-    }
- 
-    73% {
-
-      opacity: 0;
-
-    }
- 
-    75% {
-
-      left: 50%;
-
-      transform: translate(-50%, -50%) scale(0.8);
-
-      opacity: 0;
-
-    }
- 
-    78% {
-
-      opacity: 1;
-
-    }
- 
-    85% {
-
-      transform: translate(-50%, -50%) scale(1.05);
-
-    }
- 
-    90%, 100% {
-
-      left: 50%;
-
-      transform: translate(-50%, -50%) scale(1.15);
-
-      opacity: 1;
-
-    }
-
-  }
-
-}
  
 /* ================================
 
@@ -1361,392 +1167,216 @@
 
 ================================ */
  
-@media (max-width: 576px) {
 
-  .car_location_marker {
-
-    width: 75px;
-
-  }
- 
-  @keyframes carTeleport {
-
-    0% {
-
-      left: 10%;
-
-      transform: translateY(-50%) scale(0.55);
-
-      opacity: 0;
-
-    }
- 
-    3% {
-
-      opacity: 1;
-
-    }
- 
-    20% {
-
-      left: 10%;
-
-      transform: translateY(-50%) scale(0.55);
-
-      opacity: 1;
-
-    }
- 
-    23% {
-
-      opacity: 0;
-
-    }
- 
-    25% {
-
-      left: 50%;
-
-      transform: translate(-50%, -50%) scale(0.65);
-
-      opacity: 0;
-
-    }
- 
-    28% {
-
-      opacity: 1;
-
-    }
- 
-    45% {
-
-      left: 50%;
-
-      transform: translate(-50%, -50%) scale(0.65);
-
-      opacity: 1;
-
-    }
- 
-    48% {
-
-      opacity: 0;
-
-    }
- 
-    50% {
-
-      left: 90%;
-
-      transform: translateY(-50%) scale(0.6);
-
-      opacity: 0;
-
-    }
- 
-    53% {
-
-      opacity: 1;
-
-    }
- 
-    70% {
-
-      left: 90%;
-
-      transform: translateY(-50%) scale(0.6);
-
-      opacity: 1;
-
-    }
- 
-    73% {
-
-      opacity: 0;
-
-    }
- 
-    75% {
-
-      left: 50%;
-
-      transform: translate(-50%, -50%) scale(0.75);
-
-      opacity: 0;
-
-    }
- 
-    78% {
-
-      opacity: 1;
-
-    }
- 
-    85% {
-
-      transform: translate(-50%, -50%) scale(0.95);
-
-    }
- 
-    90%, 100% {
-
-      left: 50%;
-
-      transform: translate(-50%, -50%) scale(1.05);
-
-      opacity: 1;
-
-    }
-
-  }
-
-}
-
- /* ================================
+/* ================================
 
    ABOUT US SECTION WITH TAXI VIDEO
 
 ================================ */
 
-/* About us sectionnn//////////////////////// */
-  .about_us_section {
-    width: 100%;
-    height: 900px;
-    background-color: #000;
-    opacity: 1;
-    display: flex;
-    
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  .about_us_content {
-    max-width: 900px;
-    text-align: center;
-    color: #fff;
-  }
-
-  .about_us_content h2 {
-    font-size: 56px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    margin-top:120px;
-  }
-
-  .about_us_content p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #dcdcdc;
-    margin-bottom: 20px;
-  }
-
-  .download_btn {
-    margin-top: 40px;
-    padding: 14px 36px;
-    background-color: #5E45AD;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .download_btn:hover {
-    background-color: #4b3790;
-    transform: translateY(-2px);
-  }
-
- 
 .about_us_section {
-
   width: 100%;
-
-  min-height: 800px;
-
+  min-height: 400px; /* Increased from 500px */
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: flex-start;
-
-  padding: 80px 5% 0;
-
+  padding: 40px 5% 0;
   margin: 0 auto;
-
   position: relative;
-
   overflow: hidden;
-
+  background-color: #000;
 }
- 
+
 .about_us_content {
-
-  max-width: 900px;
-
+  max-width: 1050px;
   text-align: center;
-
   color: #fff;
-
-  z-index: 2;
-
+  z-index: 2; /* Added space below content */
 }
- 
+
 .about_us_content h2 {
-
-  font-size: 56px;
-
-  font-weight: 700;
-
-  margin-bottom: 30px;
-
-  margin-top: 0;
-
+  font-size: 45px;
+  /* font-weight: 700; */
+  margin-bottom: 13px;
+  margin-top: 8px;
 }
- 
+
 .about_us_content p {
-
-  font-size: 18px;
-
-  line-height: 1.7;
-
+  font-size: 16px;
+  /* line-height: 1.7; */
   color: #dcdcdc;
-
   margin-bottom: 20px;
-
 }
- 
+
 .download_btn {
-
-  margin-top: 40px;
-
+  margin-top: 8px; 
   padding: 14px 36px;
-
   background-color: #5E45AD;
-
   color: #fff;
-
-  font-size: 18px;
-
+  font-size: 15px;
   border: none;
-
   border-radius: 8px;
-
   cursor: pointer;
-
   transition: all 0.3s ease;
-
 }
- 
+
 .download_btn:hover {
-
   background-color: #4b3790;
-
   transform: translateY(-2px);
-
 }
- 
+
 /* ================================
 
-   MOVING TAXI VIDEO - FULL WIDTH
+   MOVING TAXI VIDEO - POSITIONED HIGHER
 
 ================================ */
- 
+
+/* ================================
+
+   MOVING TAXI VIDEO - POSITIONED HIGHER
+
+================================ */
+
 .moving_taxi_container {
-
   width: 100%;
-
   position: absolute;
-
-  bottom: 0;
-
+  bottom: -30px; /* Reduced from -80px - LESS negative = taxi comes DOWN */
   left: 0;
-
   right: 0;
-
   z-index: 1;
-  max-height:600px;
-  margin-bottom: 20px;
-
+  max-height: 500px; /* Reduced height to show less of video */
 }
- 
+
 .taxi_video {
-
   width: 100%;
-
   height: auto;
-
   display: block;
-
   object-fit: cover;
-
+  transform: translateY(0); /* Remove or reduce negative transform */
 }
- 
+
+/* OR if you want taxi even lower with less empty space below: */
+
+.moving_taxi_container.low-taxi {
+  width: 100%;
+  position: absolute;
+  bottom: 0px; /* Zero or positive value = taxi at very bottom */
+  left: 0;
+  right: 0;
+  z-index: 1;
+  max-height: 400px; /* Show even less of taxi video */
+}
+
+.taxi_video.low-taxi {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transform: translateY(20px); /* Positive value pushes taxi DOWN further */
+}
+
+/* Make section shorter since taxi is lower */
+.about_us_section {
+  width: 100%;
+  min-height: 500px; /* Increase height slightly */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 5% 0;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.about_us_content {
+  max-width: 1050px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  margin-bottom: 50px; /* Adjust based on taxi position */
+}
+
 /* ================================
 
    MOBILE RESPONSIVE
 
 ================================ */
+
 @media (max-width: 1400px) {
+  .about_us_section {
+    min-height: 660px;
+  }
+  
   .moving_taxi_container {
-     /* less overlap */
-min-height: 300px;
+    bottom: 70px; /* Less negative on medium screens */
+    max-height: 560px;
   }
 }
- 
+
 @media (max-width: 992px) {
-
   .about_us_section {
-
-    max-height: 100%;
-
-    padding: 60px 5% 0;
-
+    min-height: 660px;
+    padding: 50px 5% 0;
   }
- 
-  .about_us_content h2 {
 
+  .about_us_content {
+    margin-bottom: 40px;
+  }
+
+  .about_us_content h2 {
     font-size: 42px;
-
   }
 
+  .moving_taxi_container {
+    bottom: -15px;
+    max-height: 400px;
+  }
 }
- 
-@media (max-width: 576px) {
 
+@media (max-width: 768px) {
   .about_us_section {
-
-    min-height: 100%;
-
-    padding: 40px 5% 0;
-
+    min-height: 400px;
   }
- 
+  
+  .about_us_content {
+    margin-bottom: 30px;
+  }
+  
+  .moving_taxi_container {
+    bottom: -10px;
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about_us_section {
+    min-height: 380px;
+    padding: 30px 5% 0;
+  }
+
   .about_us_content h2 {
-
     font-size: 32px;
-
   }
- 
+
   .about_us_content p {
-
-    font-size: 16px;
-
+    font-size: 14px;
   }
- 
+
   .download_btn {
-
     padding: 12px 28px;
-
     font-size: 16px;
-
   }
 
+  .moving_taxi_container {
+    bottom: -5px;
+    max-height: 300px;
+  }
 }
 /* ////////////////////////////////////// */
+
  
 
 
