@@ -1,747 +1,749 @@
-/* ==================== RESPONSIVE STYLES ==================== */
+  /* ==================== RESPONSIVE STYLES ==================== */
 
-/* Large Desktop Screens (1600px and above) */
-@media screen and (max-width: 1600px) {
-  .feature_box {
-    width: 320px;
-    height: 220px;
+  /* Large Desktop Screens (1600px and above) */
+  @media screen and (max-width: 1600px) {
+    .feature_box {
+      width: 320px;
+      height: 220px;
+    }
+    
+    .core_features_grid {
+      grid-template-columns: repeat(3, 320px);
+      gap: 25px;
+    }
   }
-  
-  .core_features_grid {
-    grid-template-columns: repeat(3, 320px);
-    gap: 25px;
-  }
-}
 
-/* Desktop Screens (1440px) */
-@media screen and (max-width: 1440px) {
-  .common_sec_width {
-    width: 92%;
+  /* Desktop Screens (1440px) */
+  @media screen and (max-width: 1440px) {
+    .common_sec_width {
+      width: 92%;
+    }
+    
+    .border-line {
+      margin: 30px 0;
+    }
+    
+    .footer_sec_wrap ul {
+      margin-top: 30px;
+    }
+    
+    .section_pad {
+      padding: 70px 0;
+    }
+    
+    .policies_inner_page .policies_content {
+      margin-top: 60px;
+    }
+    
+    .policies_content .policy_space,
+    .policies_content ul {
+      margin-bottom: 30px;
+    }
+    
+    /* Core Features */
+    .core_features_grid {
+      grid-template-columns: repeat(3, 300px);
+      gap: 20px;
+    }
+    
+    .feature_box {
+      width: 300px;
+      height: 210px;
+    }
+    
+    /* How It Works */
+    .how-card {
+      max-width: 650px;
+    }
+    
+    .how-mobile-img {
+      height: 300px;
+    }
   }
-  
-  .border-line {
-    margin: 30px 0;
-  }
-  
-  .footer_sec_wrap ul {
-    margin-top: 30px;
-  }
-  
-  .section_pad {
-    padding: 70px 0;
-  }
-  
-  .policies_inner_page .policies_content {
-    margin-top: 60px;
-  }
-  
-  .policies_content .policy_space,
-  .policies_content ul {
-    margin-bottom: 30px;
-  }
-  
-  /* Core Features */
-  .core_features_grid {
-    grid-template-columns: repeat(3, 300px);
-    gap: 20px;
-  }
-  
-  .feature_box {
-    width: 300px;
-    height: 210px;
-  }
-  
-  /* How It Works */
-  .how-card {
-    max-width: 650px;
-  }
-  
-  .how-mobile-img {
-    height: 300px;
-  }
-}
 
-/* Laptop Screens (1300px) */
-@media screen and (max-width: 1300px) {
-  .primary_btn.header_btn {
-    border-radius: 15px;
-    padding: 14px 20px;
+  /* Laptop Screens (1300px) */
+  @media screen and (max-width: 1300px) {
+    .primary_btn.header_btn {
+      border-radius: 15px;
+      padding: 14px 20px;
+    }
+    
+    .policies_inner_page .policies_content {
+      margin-top: 40px;
+    }
+    
+    /* Core Features */
+    .core_features_grid {
+      grid-template-columns: repeat(3, 280px);
+    }
+    
+    .feature_box {
+      width: 280px;
+      height: 200px;
+    }
+    
+    /* Download Section */
+    .download-section .mobile-image img {
+      width: 500px;
+      min-height: 600px;
+    }
   }
-  
-  .policies_inner_page .policies_content {
-    margin-top: 40px;
-  }
-  
-  /* Core Features */
-  .core_features_grid {
-    grid-template-columns: repeat(3, 280px);
-  }
-  
-  .feature_box {
-    width: 280px;
-    height: 200px;
-  }
-  
-  /* Download Section */
-  .download-section .mobile-image img {
-    width: 500px;
-    min-height: 600px;
-  }
-}
 
-/* Large Tablet (1200px) */
-@media screen and (max-width: 1200px) {
-  .hero_sec_content {
-    top: 100px;
+  /* Large Tablet (1200px) */
+  @media screen and (max-width: 1200px) {
+    .hero_sec_content {
+      top: 100px;
+    }
+    
+    .common_sec_width {
+      width: 94%;
+    }
+    
+    /* Core Features - Switch to 2 columns */
+    .core_features_grid {
+      grid-template-columns: repeat(2, 350px);
+      justify-content: center;
+    }
+    
+    .feature_box {
+      width: 350px;
+      height: 230px;
+    }
+    
+    /* How It Works */
+    .how-card {
+      max-width: 550px;
+      margin: 0 auto 30px;
+    }
+    
+    /* Download Section */
+    .download-section .mobile-image {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin: 40px auto;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .download-section .mobile-image img {
+      width: 400px;
+      min-height: auto;
+      max-height: 500px;
+    }
+    
+    .download-section .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .download-section .text-box {
+      text-align: center;
+      margin: 0 auto 40px;
+    }
+    
+    .video-row {
+      justify-content: center;
+    }
   }
-  
-  .common_sec_width {
-    width: 94%;
-  }
-  
-  /* Core Features - Switch to 2 columns */
-  .core_features_grid {
-    grid-template-columns: repeat(2, 350px);
-    justify-content: center;
-  }
-  
-  .feature_box {
-    width: 350px;
-    height: 230px;
-  }
-  
-  /* How It Works */
-  .how-card {
-    max-width: 550px;
-    margin: 0 auto 30px;
-  }
-  
-  /* Download Section */
-  .download-section .mobile-image {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin: 40px auto;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .download-section .mobile-image img {
-    width: 400px;
-    min-height: auto;
-    max-height: 500px;
-  }
-  
-  .download-section .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .download-section .text-box {
-    text-align: center;
-    margin: 0 auto 40px;
-  }
-  
-  .video-row {
-    justify-content: center;
-  }
-}
 
-/* Tablet (992px) */
-@media screen and (max-width: 991.5px) {
-  /* General */
-  .section_pad {
-    padding: 40px 0;
+  /* Tablet (992px) */
+  @media screen and (max-width: 991.5px) {
+    /* General */
+    .section_pad {
+      padding: 40px 0;
+    }
+    
+    header {
+      padding: 15px 0;
+    }
+    
+    .desktop_menu,
+    .header_button {
+      display: none;
+    }
+    
+    .ham_btn {
+      display: block;
+    }
+    
+    .hero_sec_content {
+      top: 60px;
+    }
+    
+    .policies_inner_page .policies_content {
+      margin-top: 25px;
+    }
+    
+    /* About Us */
+    .about_us_section {
+      height: auto;
+      padding: 80px 20px;
+    }
+    
+    .about_us_content {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    
+    .about_us_content h2 {
+      margin-top: 80px;
+      font-size: 42px;
+    }
+    
+    .about_us_content p {
+      font-size: 16px;
+    }
+    
+    /* Core Features */
+    .core_features_section {
+      padding: 60px 0;
+    }
+    
+    .core_features_grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .feature_box {
+      width: 100%;
+      max-width: 400px;
+      height: 200px;
+      margin: 0 auto;
+    }
+    
+    .core_features_heading h2 {
+      font-size: 36px;
+    }
+    
+    /* How It Works */
+    .how-it-works {
+      padding: 60px 0;
+    }
+    
+    .how-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+    
+    .how-card {
+      max-width: 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .how-mobile-img {
+      height: 250px;
+      margin-bottom: 20px;
+    }
+    
+    .how-card-title {
+      font-size: 22px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    .how-list {
+      padding-left: 20px;
+    }
+    
+    .how-list li {
+      font-size: 14px;
+    }
+    
+    /* Download Section */
+    .download-section {
+      padding-top: 60px;
+      padding-bottom: 80px;
+      min-height: auto;
+    }
+    
+    .download-section .mobile-image {
+      margin: 30px auto;
+    }
+    
+    .download-section .mobile-image img {
+      width: 350px;
+      max-height: 450px;
+    }
+    
+    .video-card-wrapper {
+      width: 200px;
+    }
+    
+    .video-card {
+      width: 200px;
+      height: 120px;
+    }
+    
+    .download-border {
+      width: 80px;
+      height: 100%;
+    }
   }
-  
-  header {
-    padding: 15px 0;
-  }
-  
-  .desktop_menu,
-  .header_button {
-    display: none;
-  }
-  
-  .ham_btn {
-    display: block;
-  }
-  
-  .hero_sec_content {
-    top: 60px;
-  }
-  
-  .policies_inner_page .policies_content {
-    margin-top: 25px;
-  }
-  
-  /* About Us */
-  .about_us_section {
-    height: auto;
-    padding: 80px 20px;
-  }
-  
-  .about_us_content {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-  
-  .about_us_content h2 {
-    margin-top: 80px;
-    font-size: 42px;
-  }
-  
-  .about_us_content p {
-    font-size: 16px;
-  }
-  
-  /* Core Features */
-  .core_features_section {
-    padding: 60px 0;
-  }
-  
-  .core_features_grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .feature_box {
-    width: 100%;
-    max-width: 400px;
-    height: 200px;
-    margin: 0 auto;
-  }
-  
-  .core_features_heading h2 {
-    font-size: 36px;
-  }
-  
-  /* How It Works */
-  .how-it-works {
-    padding: 60px 0;
-  }
-  
-  .how-title {
-    font-size: 32px;
-    margin-bottom: 40px;
-  }
-  
-  .how-card {
-    max-width: 100%;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .how-mobile-img {
-    height: 250px;
-    margin-bottom: 20px;
-  }
-  
-  .how-card-title {
-    font-size: 22px;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
-  .how-list {
-    padding-left: 20px;
-  }
-  
-  .how-list li {
-    font-size: 14px;
-  }
-  
-  /* Download Section */
-  .download-section {
-    padding-top: 60px;
-    padding-bottom: 80px;
-    min-height: auto;
-  }
-  
-  .download-section .mobile-image {
-    margin: 30px auto;
-  }
-  
-  .download-section .mobile-image img {
-    width: 350px;
-    max-height: 450px;
-  }
-  
-  .video-card-wrapper {
-    width: 200px;
-  }
-  
-  .video-card {
-    width: 200px;
-    height: 120px;
-  }
-  
-  .download-border {
-    width: 80px;
-    height: 100%;
-  }
-}
 
-/* Mobile Landscape (768px) */
-@media screen and (max-width: 768px) {
-  /* Hero Section */
-  .hero_sec_content h1 {
-    font-size: 32px;
+  /* Mobile Landscape (768px) */
+  @media screen and (max-width: 768px) {
+    /* Hero Section */
+    .hero_sec_content h1 {
+      font-size: 32px;
+    }
+    
+    .hero_sec_content h1 b {
+      font-size: 40px;
+    }
+    
+    /* About Us */
+    .about_us_content h2 {
+      font-size: 36px;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+    
+    .download_btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 16px;
+    }
+    
+    /* Core Features */
+    .core_features_heading h2 {
+      font-size: 32px;
+    }
+    
+    .feature_box h3 {
+      font-size: 18px;
+    }
+    
+    .feature_box p {
+      font-size: 13px;
+    }
+    
+    /* How It Works */
+    .how-title {
+      font-size: 28px;
+    }
+    
+    .how-card {
+      padding: 18px;
+      border-radius: 24px;
+    }
+    
+    .how-mobile-img {
+      height: 220px;
+    }
+    
+    /* Download Section */
+    .download-section .text-box h2 {
+      font-size: 32px;
+    }
+    
+    .download-section .text-box p {
+      font-size: 16px;
+    }
+    
+    .video-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    
+    .video-card-wrapper {
+      width: 250px;
+    }
+    
+    .video-card {
+      width: 250px;
+      height: 150px;
+    }
+    
+    .driver-btn,
+    .role-btn {
+      width: 250px;
+    }
   }
-  
-  .hero_sec_content h1 b {
-    font-size: 40px;
+
+  /* Mobile (576px) */
+  @media screen and (max-width: 575.5px) {
+    /* General */
+    .footer_sec_wrap ul {
+      flex-direction: column;
+      gap: 9px;
+      margin-top: 16px;
+    }
+    
+    .border-line {
+      margin: 25px 0;
+    }
+    
+    .hero_sec_content {
+      top: 24%;
+    }
+    
+    .policies_inner_page .policies_content {
+      margin: 25px 0 0;
+    }
+    
+    .policies_inner_page.pattern_bg {
+      background-position: center;
+    }
+    
+    .desktop-hero-bg {
+      display: none;
+    }
+    
+    .mobile-hero-bg {
+      display: block;
+    }
+    
+    .hero_sec_content h1 br {
+      display: none;
+    }
+    
+    /* Hero Section */
+    .hero_sec_content h1 {
+      font-size: 28px;
+      line-height: 1.4;
+    }
+    
+    .hero_sec_content h1 b {
+      font-size: 32px;
+    }
+    
+    /* About Us */
+    .about_us_section {
+      padding: 60px 15px;
+    }
+    
+    .about_us_content h2 {
+      font-size: 32px;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+    
+    .about_us_content p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    .download_btn {
+      padding: 12px 25px;
+      font-size: 15px;
+    }
+    
+    /* Core Features */
+    .core_features_section {
+      padding: 40px 0;
+    }
+    
+    .core_features_bg_wrap {
+      padding: 40px 15px;
+    }
+    
+    .core_features_heading {
+      margin-bottom: 30px;
+    }
+    
+    .core_features_heading h2 {
+      font-size: 28px;
+    }
+    
+    .feature_box {
+      height: 180px;
+      padding: 15px;
+      border-radius: 20px;
+    }
+    
+    /* Keep icon size consistent */
+    .feature_icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    
+    .feature_box h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    
+    .feature_box p {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    
+    /* How It Works */
+    .how-it-works {
+      padding: 40px 0;
+    }
+    
+    .how-title {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+    
+    .how-card {
+      padding: 16px;
+      border-radius: 20px;
+    }
+    
+    .how-mobile-img {
+      height: 200px;
+    }
+    
+    .how-card-title {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    
+    .how-list li {
+      font-size: 13px;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    
+    /* Download Section */
+    .download-section {
+      padding: 40px 15px;
+    }
+    
+    .download-section .text-box {
+      padding: 20px !important;
+      max-width: 100%;
+    }
+    
+    .download-section .text-box h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    
+    .download-section .text-box p {
+      font-size: 15px;
+    }
+    
+    .download-section .mobile-image img {
+      width: 280px;
+      max-height: 380px;
+      border-radius: 15px;
+    }
+    
+    .video-card-wrapper {
+      width: 100%;
+      max-width: 280px;
+    }
+    
+    .video-card {
+      width: 100%;
+      height: 140px;
+    }
+    
+    .driver-btn,
+    .role-btn {
+      width: 100%;
+      height: 48px;
+      font-size: 15px;
+    }
+    
+    .download-border {
+      width: 50px;
+      height: 100%;
+    }
   }
-  
-  /* About Us */
-  .about_us_content h2 {
-    font-size: 36px;
-    margin-top: 60px;
-    margin-bottom: 20px;
+
+  /* Small Mobile (425px) */
+  @media screen and (max-width: 425px) {
+    /* Hero Section */
+    .hero_sec_content {
+      top: 20%;
+    }
+    
+    .hero_sec_content h1 {
+      font-size: 24px;
+    }
+    
+    .hero_sec_content h1 b {
+      font-size: 28px;
+    }
+    
+    /* About Us */
+    .about_us_content h2 {
+      font-size: 28px;
+    }
+    
+    .about_us_content p {
+      font-size: 14px;
+    }
+    
+    /* Core Features */
+    .core_features_heading h2 {
+      font-size: 24px;
+    }
+    
+    .feature_box {
+      height: 170px;
+      padding: 12px;
+    }
+    
+    /* Keep icon size consistent */
+    .feature_icon {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .feature_box h3 {
+      font-size: 15px;
+    }
+    
+    .feature_box p {
+      font-size: 11px;
+    }
+    
+    /* How It Works */
+    .how-title {
+      font-size: 24px;
+    }
+    
+    .how-mobile-img {
+      height: 180px;
+    }
+    
+    .how-card-title {
+      font-size: 18px;
+    }
+    
+    .how-list li {
+      font-size: 12px;
+    }
+    
+    /* Download Section */
+    .download-section .text-box h2 {
+      font-size: 24px;
+    }
+    
+    .download-section .mobile-image img {
+      width: 250px;
+      max-height: 350px;
+    }
+    
+    .video-card {
+      height: 120px;
+    }
+    
+    .download-border {
+      display: none; /* Hide on very small screens */
+    }
   }
-  
-  .download_btn {
-    margin-top: 30px;
-    padding: 12px 30px;
-    font-size: 16px;
+
+  /* Extra Small Mobile (320px) */
+  @media screen and (max-width: 320px) {
+    .hero_sec_content h1 {
+      font-size: 22px;
+    }
+    
+    .about_us_content h2 {
+      font-size: 24px;
+    }
+    
+    .core_features_heading h2 {
+      font-size: 22px;
+    }
+    
+    .feature_box {
+      height: 160px;
+    }
+    
+    .feature_icon {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .download-section .mobile-image img {
+      width: 220px;
+    }
+    
+    .video-card {
+      height: 110px;
+    }
   }
-  
-  /* Core Features */
-  .core_features_heading h2 {
-    font-size: 32px;
+
+  /* Fix for Core Features Grid on Medium Screens */
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .core_features_grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 700px;
+    }
+    
+    .feature_box {
+      width: 100%;
+      max-width: 320px;
+      height: 200px;
+    }
   }
-  
-  .feature_box h3 {
-    font-size: 18px;
+
+  /* Fix for Download Section on Medium Screens */
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .video-row {
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+    }
+    
+    .video-card-wrapper {
+      width: 220px;
+    }
   }
-  
-  .feature_box p {
-    font-size: 13px;
+
+  /* Ensure icons maintain size on normal desktop screens */
+  @media screen and (min-width: 992px) {
+    .feature_icon {
+      width: 48px;
+      height: 48px;
+    }
   }
-  
-  /* How It Works */
-  .how-title {
-    font-size: 28px;
+
+  /* Responsive adjustments for header */
+  @media screen and (max-width: 1200px) {
+    .header_wrap {
+      gap: 30px;
+    }
+    
+    .desktop_menu .main_menu_list .main_menu_link {
+      padding: 0 15px;
+    }
   }
-  
-  .how-card {
-    padding: 18px;
-    border-radius: 24px;
+
+  /* Responsive adjustments for footer */
+  @media screen and (max-width: 768px) {
+    .footer_sec {
+      padding: 30px 0;
+    }
+    
+    .footer_logo img {
+      width: 8%;
+      min-width: 50px;
+    }
+    
+    .copyright_text {
+      margin-top: 20px;
+    }
   }
-  
-  .how-mobile-img {
-    height: 220px;
-  }
-  
-  /* Download Section */
-  .download-section .text-box h2 {
-    font-size: 32px;
-  }
-  
-  .download-section .text-box p {
-    font-size: 16px;
-  }
-  
-  .video-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-  
-  .video-card-wrapper {
-    width: 250px;
-  }
-  
-  .video-card {
-    width: 250px;
-    height: 150px;
-  }
-  
+
+  /* Smooth transitions */
+  .feature_box,
+  .video-card,
+  .how-card,
+  .download_btn,
   .driver-btn,
   .role-btn {
-    width: 250px;
+    transition: all 0.3s ease;
   }
-}
 
-/* Mobile (576px) */
-@media screen and (max-width: 575.5px) {
-  /* General */
-  .footer_sec_wrap ul {
-    flex-direction: column;
-    gap: 9px;
-    margin-top: 16px;
-  }
-  
-  .border-line {
-    margin: 25px 0;
-  }
-  
-  .hero_sec_content {
-    top: 24%;
-  }
-  
-  .policies_inner_page .policies_content {
-    margin: 25px 0 0;
-  }
-  
-  .policies_inner_page.pattern_bg {
-    background-position: center;
-  }
-  
-  .desktop-hero-bg {
-    display: none;
-  }
-  
-  .mobile-hero-bg {
-    display: block;
-  }
-  
-  .hero_sec_content h1 br {
-    display: none;
-  }
-  
-  /* Hero Section */
-  .hero_sec_content h1 {
-    font-size: 28px;
-    line-height: 1.4;
-  }
-  
-  .hero_sec_content h1 b {
-    font-size: 32px;
-  }
-  
-  /* About Us */
-  .about_us_section {
-    padding: 60px 15px;
-  }
-  
-  .about_us_content h2 {
-    font-size: 32px;
-    margin-top: 40px;
-    margin-bottom: 15px;
-  }
-  
-  .about_us_content p {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-  
-  .download_btn {
-    padding: 12px 25px;
-    font-size: 15px;
-  }
-  
-  /* Core Features */
-  .core_features_section {
-    padding: 40px 0;
-  }
-  
-  .core_features_bg_wrap {
-    padding: 40px 15px;
-  }
-  
-  .core_features_heading {
-    margin-bottom: 30px;
-  }
-  
-  .core_features_heading h2 {
-    font-size: 28px;
-  }
-  
-  .feature_box {
-    height: 180px;
-    padding: 15px;
-    border-radius: 20px;
-  }
-  
-  /* Keep icon size consistent */
-  .feature_icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-  }
-  
-  .feature_box h3 {
-    font-size: 16px;
-    margin-bottom: 6px;
-  }
-  
-  .feature_box p {
-    font-size: 12px;
-    line-height: 1.4;
-  }
-  
-  /* How It Works */
-  .how-it-works {
-    padding: 40px 0;
-  }
-  
-  .how-title {
-    font-size: 26px;
-    margin-bottom: 30px;
-  }
-  
-  .how-card {
-    padding: 16px;
-    border-radius: 20px;
-  }
-  
-  .how-mobile-img {
-    height: 200px;
-  }
-  
-  .how-card-title {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
-  
-  .how-list li {
-    font-size: 13px;
-    margin-bottom: 6px;
-    line-height: 1.5;
-  }
-  
-  /* Download Section */
-  .download-section {
-    padding: 40px 15px;
-  }
-  
-  .download-section .text-box {
-    padding: 20px !important;
+  /* Prevent horizontal scroll */
+  html, body {
+    /* overflow-x: hidden; */
     max-width: 100%;
   }
-  
-  .download-section .text-box h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-  
-  .download-section .text-box p {
-    font-size: 15px;
-  }
-  
-  .download-section .mobile-image img {
-    width: 280px;
-    max-height: 380px;
-    border-radius: 15px;
-  }
-  
-  .video-card-wrapper {
-    width: 100%;
-    max-width: 280px;
-  }
-  
-  .video-card {
-    width: 100%;
-    height: 140px;
-  }
-  
-  .driver-btn,
-  .role-btn {
-    width: 100%;
-    height: 48px;
-    font-size: 15px;
-  }
-  
-  .download-border {
-    width: 50px;
-    height: 100%;
-  }
-}
 
-/* Small Mobile (425px) */
-@media screen and (max-width: 425px) {
-  /* Hero Section */
-  .hero_sec_content {
-    top: 20%;
-  }
-  
-  .hero_sec_content h1 {
-    font-size: 24px;
-  }
-  
-  .hero_sec_content h1 b {
-    font-size: 28px;
-  }
-  
-  /* About Us */
-  .about_us_content h2 {
-    font-size: 28px;
-  }
-  
-  .about_us_content p {
-    font-size: 14px;
-  }
-  
-  /* Core Features */
-  .core_features_heading h2 {
-    font-size: 24px;
-  }
-  
-  .feature_box {
-    height: 170px;
-    padding: 12px;
-  }
-  
-  /* Keep icon size consistent */
-  .feature_icon {
-    width: 36px;
-    height: 36px;
-  }
-  
-  .feature_box h3 {
-    font-size: 15px;
-  }
-  
-  .feature_box p {
-    font-size: 11px;
-  }
-  
-  /* How It Works */
-  .how-title {
-    font-size: 24px;
-  }
-  
-  .how-mobile-img {
-    height: 180px;
-  }
-  
-  .how-card-title {
-    font-size: 18px;
-  }
-  
-  .how-list li {
-    font-size: 12px;
-  }
-  
-  /* Download Section */
-  .download-section .text-box h2 {
-    font-size: 24px;
-  }
-  
-  .download-section .mobile-image img {
-    width: 250px;
-    max-height: 350px;
-  }
-  
-  .video-card {
-    height: 120px;
-  }
-  
-  .download-border {
-    display: none; /* Hide on very small screens */
-  }
-}
 
-/* Extra Small Mobile (320px) */
-@media screen and (max-width: 320px) {
-  .hero_sec_content h1 {
-    font-size: 22px;
-  }
-  
-  .about_us_content h2 {
-    font-size: 24px;
-  }
-  
-  .core_features_heading h2 {
-    font-size: 22px;
-  }
-  
-  .feature_box {
-    height: 160px;
-  }
-  
-  .feature_icon {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .download-section .mobile-image img {
-    width: 220px;
-  }
-  
-  .video-card {
-    height: 110px;
-  }
-}
-
-/* Fix for Core Features Grid on Medium Screens */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .core_features_grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 700px;
-  }
-  
-  .feature_box {
-    width: 100%;
-    max-width: 320px;
-    height: 200px;
-  }
-}
-
-/* Fix for Download Section on Medium Screens */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .video-row {
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-  }
-  
-  .video-card-wrapper {
-    width: 220px;
-  }
-}
-
-/* Ensure icons maintain size on normal desktop screens */
-@media screen and (min-width: 992px) {
-  .feature_icon {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-/* Responsive adjustments for header */
-@media screen and (max-width: 1200px) {
-  .header_wrap {
-    gap: 30px;
-  }
-  
-  .desktop_menu .main_menu_list .main_menu_link {
-    padding: 0 15px;
-  }
-}
-
-/* Responsive adjustments for footer */
-@media screen and (max-width: 768px) {
-  .footer_sec {
-    padding: 30px 0;
-  }
-  
-  .footer_logo img {
-    width: 8%;
-    min-width: 50px;
-  }
-  
-  .copyright_text {
-    margin-top: 20px;
-  }
-}
-
-/* Smooth transitions */
-.feature_box,
-.video-card,
-.how-card,
-.download_btn,
-.driver-btn,
-.role-btn {
-  transition: all 0.3s ease;
-}
-
-/* Prevent horizontal scroll */
-html, body {
-  /* overflow-x: hidden; */
-  max-width: 100%;
-}

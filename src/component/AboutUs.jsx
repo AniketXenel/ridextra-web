@@ -1,9 +1,6 @@
 "use client";
 // import { assetPath } from "@/utils/assetPath";
-import { useEffect } from "react";
-import CoreFeatures from "./CoreFeatures";
-import HowItWorks from "./HowItWorks";
-import DownloadSection from "./DowloadSection";
+
 
 export default function AboutUs() {
 
@@ -42,9 +39,9 @@ export default function AboutUs() {
     />
 </div>
 </section>
-<CoreFeatures/>
+{/* <CoreFeatures/>
 <HowItWorks/>
-<DownloadSection/>
+<DownloadSection/> */}
        
        
 
