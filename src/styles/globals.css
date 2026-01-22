@@ -517,12 +517,7 @@ body.menu_is_visible {
   }
   /* ===== FIXED HERO + FOOTER SUPPORT ===== */
 
-.scroll-content {
-  position: relative;
-  z-index: 2;
-  margin-top: 100vh; /* hero height */
-  background: #fff;
-}
+
 
 .footer_sec {
   position: relative;
@@ -1451,7 +1446,7 @@ body.menu_is_visible {
   }
   
   .about_us_content {
-    margin-bottom: 30px;
+    margin-bottom: 140px;
   }
   
   .moving_taxi_container {

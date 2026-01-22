@@ -16,16 +16,28 @@ export default function Header() {
     const [headerHeight, setHeaderHeight] = useState(0);
 
     // Scroll behavior
-    useEffect(() => {
-    if (!isHome) return;
+ useEffect(() => {
+  if (!isHome) return;
 
-    const onScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+  const hero = document.getElementById("hero-section");
+  if (!hero) return;
 
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [isHome]);
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      // When hero is NOT visible → add dark bg
+      setScrolled(!entry.isIntersecting);
+    },
+    {
+        rootMargin: `80px 0px 0px 0px`,
+      threshold: 0.1,
+    }
+  );
+
+  observer.observe(hero);
+
+  return () => observer.disconnect();
+}, [isHome]);
+
 
   // Measure Header height
    useEffect(() => {

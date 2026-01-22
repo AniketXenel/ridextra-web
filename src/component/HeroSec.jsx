@@ -4,7 +4,7 @@ import AboutUs from "./AboutUs";
 
 export default function HeroSec() {
   return (
-    <section>
+    <section  id="hero-section">
     <section className="full-section ">
       <section className="hero_sec">
         <section className="slide_up">
